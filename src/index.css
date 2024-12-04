@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "courier-prime";
-  src: url("font/CourierPrime-Regular.ttf");
+  src: url("/public/font/CourierPrime-Regular.ttf");
 }
 .fondo {
   background-image: url(../assets/bg.svg);
