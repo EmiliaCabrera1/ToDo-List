@@ -1,6 +1,6 @@
-const InputTarea = () => {
+const InputTarea = ({ texto, setTexto }) => {
   return (
-    <div className="col-span-2">
+    <div className="col-span-3">
       <label
         htmlFor="tarea"
         className="font-['courier-prime'] text-xl font-medium"
@@ -12,6 +12,8 @@ const InputTarea = () => {
         type="text"
         id="tarea"
         name="tarea"
+        value={texto}
+        onChange={(e) => setTexto(e.target.value)}
         placeholder="Ingresar una tarea"
       />
     </div>
