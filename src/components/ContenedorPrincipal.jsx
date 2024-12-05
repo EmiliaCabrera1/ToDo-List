@@ -48,7 +48,7 @@ const ContenedorPrincipal = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mx-20 mb-20 max-w-full">
+    <div className="sm:grid min-w-[250px] md:grid-cols-5 gap-8 mx-20 mb-20 max-w-full">
       <InputTarea texto={texto} setTexto={setTexto} />
       <BotonAgregar onClick={agregarTarea} />
       <Select filtro={filtro} setFiltro={setFiltro} />

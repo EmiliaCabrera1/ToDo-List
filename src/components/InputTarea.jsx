@@ -1,6 +1,6 @@
 const InputTarea = ({ texto, setTexto }) => {
   return (
-    <div className="col-span-3">
+    <div className="w-[100%] sm:col-span-3">
       <label
         htmlFor="tarea"
         className="font-['courier-prime'] text-xl font-medium"
