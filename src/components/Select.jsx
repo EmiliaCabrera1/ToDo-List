@@ -1,6 +1,6 @@
 const Select = ({ filtro, setFiltro }) => {
   return (
-    <div className="col-span-4">
+    <div className="col-span-4 ">
       <label
         htmlFor="filtrar"
         className="font-['courier-prime'] text-xl font-medium"

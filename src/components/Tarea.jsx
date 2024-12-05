@@ -24,7 +24,7 @@ const Tarea = ({ id, tarea, completa, eliminarTarea, completarTarea }) => {
   };
 
   return (
-    <div class="flex h-[57px] my-4">
+    <div className="flex h-[57px] my-4">
       <div
         className={
           completa
@@ -43,14 +43,14 @@ const Tarea = ({ id, tarea, completa, eliminarTarea, completarTarea }) => {
         onClick={botonCompletar}
       >
         {" "}
-        <img src="assets/check.svg" alt="Tilde" class="w-6 h-6" />{" "}
+        <img src="assets/check.svg" alt="Tilde" className="w-6 h-6" />{" "}
       </button>
       <button
         className="flex items-center justify-center w-10 rounded-tr-[10px] rounded-br-[10px] border border-black bg-[#b8b3b3]"
         onClick={onOpen}
       >
         {" "}
-        <img src="assets/basurero.svg" alt="Basurero" class="w-6 h-6" />
+        <img src="assets/basurero.svg" alt="Basurero" className="w-6 h-6" />
       </button>
       <AlertDialog
         isOpen={isOpen}
