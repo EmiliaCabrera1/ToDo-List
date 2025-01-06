@@ -1,13 +1,12 @@
 import Titulo from "./components/Titulo";
-import Fondo from "./components/Fondo";
 import ContenedorPrincipal from "./components/ContenedorPrincipal";
 
 const App = () => {
   return (
-    <Fondo>
+    <div className="bg-fondo bg-no-repeat bg-cover min-h-svh max-w-full">
       <Titulo />
       <ContenedorPrincipal />
-    </Fondo>
+    </div>
   );
 };
 

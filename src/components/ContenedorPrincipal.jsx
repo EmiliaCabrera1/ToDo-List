@@ -1,8 +1,11 @@
 import InputTarea from "./InputTarea";
 import Select from "./Select";
-import BotonAgregar from "./BotonAgregar";
+
 import { useState } from "react";
 import ListaDeTareas from "./ListaDeTareas";
+import { Button } from "@chakra-ui/react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+import { color } from "framer-motion";
 
 const ContenedorPrincipal = () => {
   const tareasEnLocalStorage = JSON.parse(
@@ -15,6 +18,7 @@ const ContenedorPrincipal = () => {
   const [texto, setTexto] = useState("");
 
   const agregarTarea = () => {
+    if (texto.length === 0) return;
     const tareaAAgregar = {
       id: Math.floor(Math.random() * 100000000000),
       tarea: texto,
@@ -50,7 +54,19 @@ const ContenedorPrincipal = () => {
   return (
     <div className="sm:grid min-w-[250px] md:grid-cols-5 gap-8 mx-20 mb-20 max-w-full">
       <InputTarea texto={texto} setTexto={setTexto} />
-      <BotonAgregar onClick={agregarTarea} />
+      <Button
+        leftIcon={<ChevronRightIcon w={8} h={8} />}
+        background="black"
+        color="white"
+        size="lg"
+        variant="solid"
+        marginTop={10}
+        rounded={"xl"}
+        _hover
+        onClick={agregarTarea}
+      >
+        Agregar
+      </Button>
       <Select filtro={filtro} setFiltro={setFiltro} />
       <ListaDeTareas
         tareas={tareas}
